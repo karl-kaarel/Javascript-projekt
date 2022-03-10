@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+    	<title>projekt</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    	
+    	<link rel="stylesheet" href="list/style.css">
+    	<link rel="stylesheet" href="tictac/tic_style.css">
+    	<link rel="stylesheet" href="animatsioon/animatsioon.css">
+
+    	<!--mängu javascript kood käivitub enne lehe elementide laadimist-->
+    	<script type="text/javascript" src="tictac/tic_skript.js"></script>
+    	<script src="https://kit.fontawesome.com/6a4b67e1da.js" crossorigin="anonymous"></script>
+    	<style>
+    	   body {
+    	       background: black;
+    	   }
+    	   .container {
+    	       width: 100rem;
+    	       margin-right: auto;
+    	       margin-left: auto;
+    	   }
+    	    /*määrab, et kõik elemendid ei oleks lehe tipus*/
+    	   .alus {
+    	        padding-bottom: 20%;
+    	        background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(214,185,185,1) 35%, rgba(203,182,215,1) 62%, rgba(2,0,36,1) 100%);
+                border: 3px solid black;
+            	border-radius: 10px;
+    	    }
+    	    .marg {
+    	        margin-top: 10%;
+    	    }
+    	    .tic {
+    	        color: white;
+    	    }
+    	    .row {
+    	        flex-wrap: nowrap;
+    	    }
+    	</style>
+    </head>
+    <body>
+        <!--alus-->
+        <div class="container">
+            <div class="row">
+                <!--vasakul-->
+                <div class="col-md-4 alus marg">
+                    
+                    <!--teksti osa-->
+                    <div class="row">
+                        <h2 class="intro col-12">To-do-list</h2>
+                    </div>
+                    <div class="row">
+                        <p class="helptext col-12">Kirjuta kasti nimekirja elemendid</p>
+                    </div>
+                    
+                    <!--teksti sisestus kast ja nupp-->
+                    <div class="row">
+            			<div class="col-12">
+            				<input id="userInput" type="text" placeholder="Listi nimekiri..." maxlength="30">
+            				<button id="enter"><i class="fas fa-edit"></i></button>
+            			</div>
+        		    </div>
+        		    
+        		    <!--nimekirja elemendid-->
+        		    <div class="row">
+        		        <div class="listItems col-12">
+        		            <ul class="12 offset-0 col-sm-8 offset-sm-2">
+        		                <!--siia tulevad li elemendid, mida genereerib javascript-->
+                            </ul>
+        		        </div>
+        		    </div>
+    		    </div>
+    		    
+    		    <!--keskel-->
+    		    <div class="col-md-4">
+    		        <div class="container1" style="margin-top: 80%;">
+    		        
+    		            <div id="snowflakeContainer">
+                            <span class="snowflake"></span>
+                        </div>
+                        
+                    </div>
+    		    </div>
+    		    
+    		    <!--paremal-->
+    		    <div class="col-md-4 marg tic">
+    		        <h1>TIC TAC TOE</h1>
+ 
+                    <!-- juhend -->
+                    <p id="ins">Mäng algab, kui kastile klõpsatakse<br><br>Esimene mängja alustab<b> x-na</b><br>ja<br>teine mängja<b> 0-na</b>
+                    </p>
+                    
+                    <!-- 3*3 alus -->
+                    <div class="container" style="max-width: 50%; margin: 0px 15%;">
+                        <div class="row"> 
+                            <input class="col-sm-4" type="text" id="b1" onclick=
+                                "myfunc_3(); myfunc();" readonly>
+                     
+                            <input class="col-sm-4" type="text" id="b2" onclick=
+                                "myfunc_4(); myfunc();" readonly>
+                     
+                            <input class="col-sm-4" type="text" id="b3" onclick=
+                                "myfunc_5(); myfunc();" readonly>
+                        </div>
+                    
+                        <div class="row">
+                            <input class="col-sm-4" type="text" id="b4" onclick=
+                                "myfunc_6(); myfunc();" readonly>
+                                 
+                            <input class="col-sm-4" type="text" id="b5" onclick=
+                                "myfunc_7(); myfunc();" readonly>
+                     
+                            <input class="col-sm-4" type="text" id="b6" onclick=
+                                "myfunc_8(); myfunc();" readonly>
+                        </div>
+                    
+                        <div class="row">
+                            <input class="col-sm-4" type="text" id="b7" onclick=
+                                "myfunc_9(); myfunc();" readonly>
+                     
+                            <input class="col-sm-4" type="text" id="b8" onclick=
+                                "myfunc_10();myfunc();" readonly>
+                     
+                            <input class="col-sm-4" type="text" id="b9" onclick=
+                                "myfunc_11();myfunc();" readonly>
+                        </div>
+                    </div>
+                    
+                    <br><br><br>
+                    
+                    <!-- reset nupp -->
+                    <button id="but" onclick="myfunc_2()">
+                        UUESTI
+                    </button>
+             
+                    <br><br>
+                    <!-- indikaator, mis näitab kelle kord on -->
+                    <p id="print"></p>
+    		    </div>
+            </div>
+        </div>
+        
+        <!--listi javascript kood käivitub pärast lehe elementide laadimist-->
+        <script type="text/javascript" src="list/skript.js"></script>
+    	<script type="text/javascript" src="animatsioon/animatsioon.js"></script>
+
+    </body>
+</html>

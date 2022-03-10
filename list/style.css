@@ -1,0 +1,89 @@
+/*keha elemendid, taust, tekst*/
+body {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*h1 atribuudid*/
+.intro {
+	margin: 30px 0px;
+	font-weight: bold;
+}
+
+/*nupp kujundus*/
+#enter {
+	border: none;
+	padding: 10px 15px;
+	border-radius: 5px;
+	color: #04A1BF;
+	background-color: #025F70;
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	-moz-transition: all 0.75s ease;
+	-ms-transition: all 0.75s ease;
+	-o-transition: all 0.75 ease;
+	font-weight: normal;
+}
+
+#enter:hover{
+	background-color: #02798F;
+	color: #FFCD5D;
+	position: relative;
+	left: 2px;
+	bottom: 2px;
+}
+
+/*nupu ees oleva kasti kujundus*/
+input {
+	border-radius: 5px;
+	min-width: 45%;
+	padding: 5px;
+}
+
+/*listi nimekirja elementide kujundus*/
+ul {
+	text-align: left;
+	margin-top: 20px;
+}
+
+
+li {
+	list-style: none;
+	padding: 10px 20px;
+	color: black;
+	text-transform: capitalize;
+	font-weight: 600;
+	border: 3px solid black;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	background: tan;
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5 ease;
+}
+
+li:hover {
+	background: lightgray;
+}
+
+li > button {
+	font-weight: normal;
+	background: none;
+	border: none;
+	float: right;
+	color: #025f70;
+	font-weight: 800;
+}
+
+/*kui vajutad listi kirjutatud elemendile peale*/
+.done {
+	background: palegreen !important;
+	color: black;
+}
+
+/*kui vajutad listi kirjatud elemendi ristile*/
+.delete {
+	display: none;
+}
